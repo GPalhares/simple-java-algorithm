@@ -17,10 +17,10 @@ public class App {
     scanner.nextLine();
 
     String[] nameActivities = new String[quantityActivities];
-    int[] wightActivity = new int[quantityActivities];
-    int[] notaActivity = new int[quantityActivities];
-    int notaFinal = 0;
-    int pesoFinal = 0;
+    double[] wightActivity = new double[quantityActivities];
+    double[] notaActivity = new double[quantityActivities];
+    double notaFinal = 0.0;
+    double pesoFinal = 0.0;
 
     for (int i = 0; i < quantityActivities; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
@@ -33,14 +33,14 @@ public class App {
       notaFinal += notaActivity[i] * wightActivity[i];
       pesoFinal += wightActivity[i];
     }
-
+    System.out.println(notaFinal / pesoFinal);
     if (notaFinal / pesoFinal >= 85) {
-      System.out.println("Parabéns! Você alcançou " + notaFinal / pesoFinal + "%!"
+      System.out.print("Parabéns! Você alcançou " + notaFinal / pesoFinal + "%!"
               + " E temos o prazer de informar que você obteve aprovação! ");
     }
 
     if (notaFinal / pesoFinal < 85) {
-      System.out.println("Lamentamos informar que,"
+      System.out.print("Lamentamos informar que,"
               + " com base na sua pontuação alcançada neste período, " + notaFinal / pesoFinal
               + "%, você não atingiu a pontuação mínima necessária para sua aprovação. ");
     }
