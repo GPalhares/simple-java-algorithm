@@ -18,14 +18,16 @@ public class App {
 
     String[] nameActivities = new String[quantityActivities];
     int[] wightActivity = new int[quantityActivities];
+    int[] notaActivity = new int[quantityActivities];
 
     for (int i = 0; i < quantityActivities; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
       nameActivities[i] = scanner.nextLine();
-
       System.out.println("Digite o peso da atividade " + (i + 1) + ":");
       wightActivity[i] = scanner.nextInt();
-      scanner.nextLine(); // Limpar o buffer do scanner
+      System.out.println("Digite a nota obtida para " + nameActivities[i] + ":");
+      notaActivity[i] = scanner.nextInt();
+      scanner.nextLine();
     }
   }
 }
